@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>User {{user.username}}</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../static/userManage/nav_styles.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/static/userManage/nav_styles.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../static/userManage/oper_styles.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/static/userManage/oper_styles.css">
+    </head>
+  {%load static%}
+  <script type="text/javascript" language="javascript">
+  function iFrameHeight(o) {
+      var ifm = document.getElementById("displayer");
+      var subWeb = document.frames ?
+        document.frames["displayer"].document :
+        ifm.contentDocument;
+      if (ifm != null && subWeb != null) {
+          ifm.height = subWeb.body.scrollHeight;
+          ifm.width =subWeb.body.scrollWidth;
+      }
+ }
+  }
+  </script>
+  <body>
+    <div id="nav">
+      <li class="dropDownBtn">
+        <a class="dropDownLabel">User</a>
+        <div class="dropDownContent">
+          <a class="dropDownContentItem" href="#">{{user.username}}</a>
+          <a class="dropDownContentItem" href="{% url 'userManage:logout' %}">logout</a>
+        </div>
+      </li>
+      <li class="dropDownBtn">
+        <a class="dropDownLabel">Operate</a>
+        <div class="dropDownContent">
+          <a class="dropDownContentItem">Video</a>
+        </div>
+      </li>
+    </div>
+    {%if displayer%}
+    <div id="viewcontainer">
+      <div id="view">
+        <iframe name="displayer" seamless="yes"
+              scrolling="yes"   marginwidth="0px"
+              marginheight="0px" width=90%
+              height=600px  frameborder="0"
+              align="middle"
+              src="{{displayer.displayurl}}"
+              style="zoom:100%">
+        &lt;p&gt;您的浏览器不支持 iframe 标签。&lt;/p&gt;
+        </iframe>
+      </div>
+    </div>
+    {%else%}
+    <p>无法链接到视频源，请确认摄像头是否打开</p>
+    {%endif%}
+    <div id="oper">
+      <p>操作界面</p>
+      <a class="operateItem" href="#">
+        <img id="operFlagImg" src="{% static '/userManage/A.png'%}"></a>
+    </div>
+  </body>
+</html>

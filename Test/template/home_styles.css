@@ -1,0 +1,85 @@
+/*背景*/
+#body {
+  width: 100%;
+  background-image: url("../bodybg.jpg");
+  background-size:100% 100%
+}
+#body_Image{
+  margin: 0px;
+  width:100%;
+}
+#body_divider{
+  width: 100%;
+}
+#nav {
+  position: relative;
+  top: 10px;
+  line-height: 10vh;
+  list-style-position: outside;
+  list-style-type:none;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0;
+  list-style-type: none;
+}
+#nav a.navButton{
+  display: inline-block;
+  float: left;
+  width: 25%;
+  line-height: 10%;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+#nav a.navButton img.navButtonImg{
+  margin: 5%;
+  float: center;
+  width:50%;
+}
+#nav a.navButton img.navButtonText{
+  margin: 5%;
+  float:center;
+  width:50%;
+}
+#nav a.navButton:hover{
+  background-color: #CCC;
+  border-radius: 10%;
+}
+
+
+#AboutUs{
+  width: 100%;
+  background: #3a77ff;
+  border-radius:1px;
+}
+#AboutUsNav{
+  position: relative;
+  top: 10px;
+  line-height: 0px;
+  list-style-position: outside;
+  list-style-type:none;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+#AboutUsNav li.AboutUsBtn{
+  display: inline-block;
+  float: center;
+  margin: 3%;
+  padding:4%;
+  width: 18%;
+  line-height: 30%;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+#AboutUsNav li.AboutUsBtn img.AboutUsBtnImg{
+  float: center;
+  width:100%;
+}
+
+#AboutUsNav li.AboutUsBtn:hover{
+  background-color: #CCC;
+  border-radius: 10%;
+}
